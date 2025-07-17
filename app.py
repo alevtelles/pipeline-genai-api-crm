@@ -39,8 +39,6 @@ def main():
             st.error("Os dados fornecidos não são válidos.")
             st.json(e.errors())
 
-        
-
 
 if __name__ == "__main__":
     main()
