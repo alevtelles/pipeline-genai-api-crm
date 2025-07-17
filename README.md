@@ -1,0 +1,1 @@
+# Pipeline Gen AI - ETL com API e CRM de vendas
