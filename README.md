@@ -43,4 +43,43 @@ Sistema para gerenciamento de vendas e relacionamento com clientes, com integra�
     DB_PASS=sua_senha
 
 
-5. 
+5. Execute a aplicação:
+    ```bash
+    streamlit run app.py
+
+
+## 🗃️ Estrutura do Banco de Dados
+Certifique-se de ter uma tabela vendas com a seguinte estrutura:
+
+```bash
+CREATE TABLE vendas (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    data_hora TIMESTAMP NOT NULL,
+    valor DECIMAL(10,2) NOT NULL,
+    quantidade INTEGER NOT NULL,
+    produto VARCHAR(50) NOT NULL
+);
+
+```
+
+## 🚀 Como Usar
+- Preencha os dados do vendedor (nome e e-mail)
+- Informe a data e hora da venda
+- Selecione o produto vendido
+- Insira o valor e quantidade
+- Clique em "Salvar" para registrar a venda
+
+## 📝 Modelo de Dados
+Os dados são validados conforme o seguinte modelo:
+
+```
+class Vendas(BaseModel):
+    nome: str
+    email: EmailStr
+    data_hora: datetime
+    valor: PositiveFloat
+    quantidade: PositiveInt
+    produto: ProdutoEnum
+```
