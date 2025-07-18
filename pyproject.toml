@@ -7,6 +7,9 @@ requires-python = ">=3.13"
 dependencies = [
     "dotenv>=0.9.9",
     "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.15",
+    "mkdocstrings[python]>=0.29.1",
+    "mkdocstrings-python>=1.16.12",
     "psycopg2-binary>=2.9.10",
     "pydantic[email]>=2.11.7",
     "sqlalchemy>=2.0.41",

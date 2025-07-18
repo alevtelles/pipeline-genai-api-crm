@@ -8,6 +8,17 @@ class ProdutoEnum(str, Enum):
     produto3 = "Agentes com Ilama3"
 
 class Vendas(BaseModel):
+    """"
+    Essa é classe de vendas do banco de dados
+
+    Args:
+        nome (str): Nome do vendedor
+        email (EmailStr): E-mail do vendedor
+        data_hora (datetime): Data e hora da venda
+        valor (PositiveFloat): Valor da venda
+        quantidade (PositiveInt): Quantidade de produtos vendidos
+        produto (ProdutoEnum): Produto vendido
+    """
     nome: str
     email: EmailStr
     data_hora: datetime

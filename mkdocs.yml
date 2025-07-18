@@ -1,0 +1,10 @@
+site_name: Optimus CRM & Vendas
+
+theme:
+  name: material
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+
